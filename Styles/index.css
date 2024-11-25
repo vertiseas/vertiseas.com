@@ -1,0 +1,185 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+body {
+  background: url("../Assets/index_background.png");
+  background-size: cover;
+  height: 100vh; /* Ensures the body takes the full viewport height */
+  display: flex; /* Enables flexbox for centering #root */
+  justify-content: center;
+  align-items: center;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh; /* Ensures it spans the full viewport height */
+}
+
+#root-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 40px;
+  border-bottom: 1px solid white;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.5) 20%,
+    rgba(0, 185, 255, 0.5) 35%,
+    rgba(0, 83, 255, 0.5) 55%,
+    rgba(0, 249, 255, 0.5) 100%
+  );
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.5);
+  z-index: 10; /* Ensures header stays on top */
+  mix-blend-mode: luminosity;
+}
+
+#root-header marquee {
+  position: fixed;
+  color: white;
+}
+
+#content {
+  border: 1px solid white;
+  border-radius: 1vw;
+  margin: auto; /* Centers content within the #root */
+  width: min(75vw, 90vh);
+  aspect-ratio: 4 / 3;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.5) 5%,
+    rgba(0, 185, 255, 0.5) 35%,
+    rgba(0, 83, 255, 0.5) 55%,
+    rgba(0, 249, 255, 0.5) 100%
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.5);
+  mix-blend-mode: luminosity;
+}
+
+#content-header {
+  border-top-left-radius: 1vw;
+  border-top-right-radius: 1vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: absolute; /* Positions it relative to the parent (#content) */
+  top: 0; /* Aligns to the top of the parent */
+  left: 0; /* Aligns to the left of the parent */
+  width: 100%; /* Spans the full width of the parent */
+  height: 5%; /* Adjust this value as needed for header height */
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.5) 10%,
+    rgba(0, 185, 255, 0.75) 35%,
+    rgba(0, 83, 255, 0.75) 55%,
+    rgba(0, 249, 255, 0.75) 100%
+  );
+  opacity: 0.75;
+  z-index: 1; /* Ensures it stays above other content within #content */
+}
+#content-header img {
+  width: 15px;
+  margin-left: 10px;
+  aspect-ratio: 1 / 1;
+}
+
+#content-header h1 {
+  font-size: min(1.75vw, 1.75vh);
+  margin-left: 10px;
+  color: white;
+}
+
+#content-body {
+  padding: 10px;
+  font-size: min(1.75vw, 1.75vh);
+  width: 75%;
+  height: 75%;
+  background-color: white;
+  border-radius: 1vw;
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.5);
+}
+
+#root-footer {
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 45px;
+  border-top: 1px solid white;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.5) 10%,
+    rgba(0, 185, 255, 0.5) 35%,
+    rgba(0, 83, 255, 0.5) 55%,
+    rgba(0, 249, 255, 0.5) 100%
+  );
+  z-index: 10; /* Ensures footer stays on top */
+  mix-blend-mode: luminosity;
+}
+
+#navbar {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  align-items: center;
+  position: relative;
+}
+
+#navbar ul {
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+  width: 500px;
+}
+
+#navbar li {
+  color: white;
+  font-size: 12px;
+  width: 60px;
+  aspect-ratio: 1 / 1;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.5) 10%,
+    rgba(0, 185, 255, 0.5) 35%,
+    rgba(0, 83, 255, 0.5) 55%,
+    rgba(0, 249, 255, 0.5) 100%
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid white;
+  border-radius: 15px;
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.5);
+  transform: translateY(-40px);
+  position: relative;
+}
+
+.icon {
+  filter: invert();
+  width: 40%;
+  aspect-ratio: 1 / 1;
+  margin: 5px;
+}
