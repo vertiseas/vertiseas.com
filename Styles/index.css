@@ -9,7 +9,6 @@
 body {
   background: url("../Assets/index_background.png");
   background-size: cover;
-  backdrop-filter: blur(8px);
   height: 100vh; /* Ensures the body takes the full viewport height */
   display: flex; /* Enables flexbox for centering #root */
   justify-content: center;
